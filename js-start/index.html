@@ -29,38 +29,42 @@
    <button id="BUTON" class="button">Изменяйся</button>-->
 
    <div class="wrapper">
-      <div class="first-name">
-         <p>First Name</p>
-         <input id="first-name" type="text" value="Maikle">
+      <div class="first-part">
+         <div class="first-name">
+            <p>First Name</p>
+            <input id="first-name" type="text" value="Maikle">
+         </div>
+         <div class="second-name">
+            <p>Last Name</p>
+            <input id="last-name" type="text" value="Karas">
+         </div>
+         <div class="city">
+            <p>Cities?</p>
+            <select name="" id="cities">
+               <option value="Minsk">Минск</option>
+               <option selected value="Kiev">Киев</option>
+               <option value="Moscow">Москва</option>
+            </select>
+         </div>
+         <div class="about">
+            <p>About me</p>
+            <textarea name="" id="aboutMe">I am good man. I want to find a job</textarea>
+         </div>
       </div>
-      <div class="second-name">
-         <p>Last Name</p>
-         <input id="last-name" type="text" value="Karas">
-      </div>
-      <div class="sex">
-         <p>Sex</p>
-         <p> <input checked id="sex" type="radio" name="gender" value="men">M <input checked='qwert' id="sex2" type="radio" name="gender" value="femail">F</p>
-      </div>
-      <div class="single">
-         <p> Single <input checked id='checkbox1' type="checkbox" name="idle" id=""></p>
-      </div>
-      <div id="avatar" class="avatar">
-         <img id="avatarImage" src="./img/avaEnot.png" alt="Не свизло">
-      </div>
-      <div class="city">
-         <p>Cities?</p>
-         <select name="" id="cities">
-            <option value="Minsk">Минск</option>
-            <option selected value="Kiev">Киев</option>
-            <option value="Moscow">Москва</option>
-         </select>
-      </div>
-      <div class="about">
-         <p>About me</p>
-         <textarea name="" id="aboutMe">I am good man. I want to find a job</textarea>
+      <div class="thecond-part">
+         <div id="avatar" class="avatar">
+            <img id="avatarImage" src="https://icdn.lenta.ru/images/2021/04/27/16/20210427163138131/square_320_c09ebae17387b7d6eeb9fa0d42afe5ee.jpg" alt="Не свизло">
+         </div>
+         <div class="sex">
+            <p>Sex</p>
+            <p> <input checked id="sex" type="radio" name="gender" value="men">M <input checked='qwert' id="sex2" type="radio" name="gender" value="femail">F</p>
+         </div>
+         <div class="single">
+            <p> Single <input checked id='checkbox1' type="checkbox" name="idle" id=""></p>
+         </div>
+         <button id="change">Смена аватара</button>
       </div>
    </div>
-
 
    <script src="./js/script.js"></script>
 </body>

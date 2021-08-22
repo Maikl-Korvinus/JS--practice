@@ -21,8 +21,8 @@ testWebP(function (support) {
 // не забудьте установить для кнопки в html-е значение атрибута id='login'
 /*let loginButton = document.getElementById('login');
 loginButton.onclick = function () {
-   
-};*/
+
+};
 
 
 
@@ -47,5 +47,11 @@ setTimeout(function () {
    let about = document.getElementById('aboutMe');
    about.innerHTML = 'I love you';
 }, 5000);
+*/
 
 
+
+change.onclick = function () {
+   let now = document.getElementById('avatarImage');
+   now.src = 'https://sun1.dataix-by-minsk.userapi.com/s/v1/if1/AEX7JGD6owhHdKn-WrKhMoxgjKEQd64R9xEd6OMQ6Gp5aGimZAXu8_RIGeV3-_8i9qR6oDwm.jpg?size=50x50&quality=96&crop=712,919,1232,1232&ava=1';
+}
