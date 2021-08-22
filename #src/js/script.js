@@ -18,40 +18,57 @@ testWebP(function (support) {
 });
 
 
-// не забудьте установить для кнопки в html-е значение атрибута id='login'
-/*let loginButton = document.getElementById('login');
-loginButton.onclick = function () {
+function changeValue(xname) {
+   let name1 = document.getElementById('name1');
+   name1.value = xname;
+   let name2 = document.getElementById('name2');
+   name2.value = xname;
+   let name3 = document.getElementById('name3');
+   name3.value = xname;
+}
+/*
+let name1 = document.getElementById('name1');
+name1.className = 'error + name-first';
+let name2 = document.getElementById('name2');
+name2.className = 'error + name-first';
+let name3 = document.getElementById('name3');
+name3.className = 'error + name-first';
 
-};
+function timeoutError() {
+   function setError(idElement) {
+      let someElement = document.getElementById(idElement);
+      someElement.className = 'error';
+   }
+   setError('name1');
+}
+
+function sayHello() {
+   alert('Hello');
+}
+setTimeout(timeoutError, 3000);
+
+function hideElement(dishka) {
+   let value = document.getElementById(dishka);
+   value.className = 'invis';
+}
 
 
+function showElement(dishka) {
+   let value = document.getElementById(dishka);
+   value.className = 'noinvis';
+}
 
-setTimeout(function () {
-   let name = document.getElementById('first-name');
-   name.value = 'Misha';
-
-   let surname = document.getElementById('last-name');
-   surname.value = 'Ne-Karas';
-
-   document.getElementById('sex').checked = false;
-   document.getElementById('sex2').checked = true;
-
-   document.getElementById('checkbox1').checked = false;
-
-   let avatar = document.getElementById('avatarImage');
-   avatar.src = './img/USHI.png'
-
-   let city = document.getElementById('cities');
-   city.value = "Moscow";
-
-   let about = document.getElementById('aboutMe');
-   about.innerHTML = 'I love you';
-}, 5000);
+let a = 0;
+function chasi() {
+   let someInput = document.getElementById('name1');
+   someInput.value = a;
+   a++
+}
+setInterval(chasi, 1000);
 */
 
-
-
-change.onclick = function () {
-   let now = document.getElementById('avatarImage');
-   now.src = 'https://sun1.dataix-by-minsk.userapi.com/s/v1/if1/AEX7JGD6owhHdKn-WrKhMoxgjKEQd64R9xEd6OMQ6Gp5aGimZAXu8_RIGeV3-_8i9qR6oDwm.jpg?size=50x50&quality=96&crop=712,919,1232,1232&ava=1';
+function getSumm(a, b) {
+   let result = +a + +b;
+   console.log(result);
 }
+getSumm('7', '10');

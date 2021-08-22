@@ -12,22 +12,12 @@
 body {
    background-color: rgb(221, 133, 74);
 }
-.wrapper {
-   width: 500px;
-   margin: 0 auto;
-   display: grid;
-   grid-template: 1fr / 2fr 3fr;
+.error {
+   border: 1px solid red;
 }
-.first-part {
-   order: 2;
-   padding: 0 0 0 30px;
+.invis {
+   display: none;
 }
-.thecond-part {
-   order: 1;
-}
-.sex {
-   padding: 0 0 0 30px;
-}
-.single {
-   padding: 0 0 0 30px;
+.noinvis {
+   border: 1px solid green;
 }
