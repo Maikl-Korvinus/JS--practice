@@ -18,6 +18,7 @@ testWebP(function (support) {
 });
 
 
+/*
 function changeValue(xname) {
    let name1 = document.getElementById('name1');
    name1.value = xname;
@@ -26,7 +27,7 @@ function changeValue(xname) {
    let name3 = document.getElementById('name3');
    name3.value = xname;
 }
-/*
+
 let name1 = document.getElementById('name1');
 name1.className = 'error + name-first';
 let name2 = document.getElementById('name2');
@@ -65,10 +66,41 @@ function chasi() {
    a++
 }
 setInterval(chasi, 1000);
-*/
+
 
 function getSumm(a, b) {
    let result = +a + +b;
    console.log(result);
 }
 getSumm('7', '10');
+*/
+
+function findElement(id) {
+   let dishka = id;
+   let element = document.getElementById(dishka);
+   if (element != null) {
+      element.remove();
+   }
+
+}
+
+
+function findElementAddClass(id, classNmaeStyle) {
+   let dishka = id;
+   let element = document.getElementById(dishka);
+   if (element != null) {
+      element.className = 'image-wrapper ' + (classNmaeStyle);
+   }
+}
+//findElementAddClass('kartinka', 'image-null')
+
+function hideElement() {
+
+   setTimeout(findElementAddClass('kartinka', 'image-null'), 1000);
+}
+
+function findElement() {
+
+   setTimeout(findElementAddClass('kartinka', 'image-full'), 2000);
+}
+findElement();
