@@ -75,32 +75,47 @@ function getSumm(a, b) {
 getSumm('7', '10');
 */
 
-function findElement(id) {
-   let dishka = id;
-   let element = document.getElementById(dishka);
-   if (element != null) {
-      element.remove();
+let plusEl = document.getElementById("buttonPlus");
+let minusEl = document.getElementById("buttonMinus");
+let multyPlyEl = document.getElementById("buttonMultyPly");
+let devideEl = document.getElementById("buttonDevide");
+
+let elemOfval1 = document.getElementById("first-input");
+let elemOfval2 = document.getElementById("second-input");
+
+function getNumber1() {
+   return elemOfval1.value;
+}
+function getNumber2() {
+   return elemOfval2.value;
+}
+
+function makeOperation(operatinCode) {
+   if (operatinCode === '+') {
+      var result = +getNumber1() + +getNumber2();
+   } else if (operatinCode === '-') {
+      var result = +getNumber1() - +getNumber2();
+   } else if (operatinCode === '*') {
+      var result = +getNumber1() * +getNumber2();
+   } else {
+      var result = +getNumber1() / +getNumber2();
    }
-
+   alert(result);
 }
 
-
-function findElementAddClass(id, classNmaeStyle) {
-   let dishka = id;
-   let element = document.getElementById(dishka);
-   if (element != null) {
-      element.className = 'image-wrapper ' + (classNmaeStyle);
-   }
+function sumOfValues() {
+   makeOperation('+');
 }
-//findElementAddClass('kartinka', 'image-null')
-
-function hideElement() {
-
-   setTimeout(findElementAddClass('kartinka', 'image-null'), 1000);
+function differenceOfValues() {
+   makeOperation('-');
 }
-
-function findElement() {
-
-   setTimeout(findElementAddClass('kartinka', 'image-full'), 2000);
+function multOfValues() {
+   makeOperation('*');
 }
-findElement();
+function devideOfValues() {
+   makeOperation('/');
+}
+plusEl.addEventListener('click', sumOfValues);
+minusEl.addEventListener('click', differenceOfValues);
+multyPlyEl.addEventListener('click', multOfValues);
+devideEl.addEventListener('click', devideOfValues);

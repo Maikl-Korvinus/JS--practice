@@ -34,28 +34,25 @@ body {
   background-color: #dd854a;
 }
 
-.black {
-  border: 5px solid black;
+.wrapper {
+  width: 500px;
+  margin: 0 auto;
+  background-color: #81edf5;
+  text-align: center;
+  padding: 50px 0;
 }
 
-.kek {
-  margin: 30px 0 0 0;
-}
-
-.image-wrapper {
-  background-color: #fff;
-  width: 0px;
-  height: 150px;
+.block1 {
   margin: 0px 0px 30px 0px;
-  -webkit-transition-duration: 5s;
-       -o-transition-duration: 5s;
-          transition-duration: 5s;
 }
 
-.image-null {
-  width: 10px;
+.block1 button {
+  margin: 0 20px;
+  width: 40px;
+  height: 40px;
 }
 
-.image-full {
-  width: 250px;
+.block2 {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
 }
