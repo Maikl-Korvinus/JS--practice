@@ -75,47 +75,39 @@ function getSumm(a, b) {
 getSumm('7', '10');
 */
 
-let plusEl = document.getElementById("buttonPlus");
-let minusEl = document.getElementById("buttonMinus");
-let multyPlyEl = document.getElementById("buttonMultyPly");
-let devideEl = document.getElementById("buttonDevide");
+
+
+let operationButtons = document.getElementsByClassName('operation-button');
 
 let elemOfval1 = document.getElementById("first-input");
 let elemOfval2 = document.getElementById("second-input");
 
-function getNumber1() {
-   return elemOfval1.value;
-}
-function getNumber2() {
-   return elemOfval2.value;
-}
 
 function makeOperation(operatinCode) {
+   var number1 = elemOfval1.value;
+   var number2 = elemOfval2.value;
    if (operatinCode === '+') {
-      var result = +getNumber1() + +getNumber2();
+      var result = +number1 + +number2;
    } else if (operatinCode === '-') {
-      var result = +getNumber1() - +getNumber2();
+      var result = +number1 - +number2;
    } else if (operatinCode === '*') {
-      var result = +getNumber1() * +getNumber2();
+      var result = +number1 * +number2;
    } else {
-      var result = +getNumber1() / +getNumber2();
+      var result = +number1 / +number2;
    }
    alert(result);
 }
+function onOperationButtonClick(eventObject) {
+   var clickedEl = eventObject.currentTarget;
+   var operation = clickedEl.innerHTML;
+   makeOperation(operation);
+}
 
-function sumOfValues() {
-   makeOperation('+');
+
+for (let i = 0; i < operationButtons.length; i++) {
+   var button = operationButtons[i];
+   button.addEventListener('click', onOperationButtonClick);
 }
-function differenceOfValues() {
-   makeOperation('-');
-}
-function multOfValues() {
-   makeOperation('*');
-}
-function devideOfValues() {
-   makeOperation('/');
-}
-plusEl.addEventListener('click', sumOfValues);
-minusEl.addEventListener('click', differenceOfValues);
-multyPlyEl.addEventListener('click', multOfValues);
-devideEl.addEventListener('click', devideOfValues);
+
+
+
