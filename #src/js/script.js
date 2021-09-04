@@ -18,96 +18,16 @@ testWebP(function (support) {
 });
 
 
-/*
-function changeValue(xname) {
-   let name1 = document.getElementById('name1');
-   name1.value = xname;
-   let name2 = document.getElementById('name2');
-   name2.value = xname;
-   let name3 = document.getElementById('name3');
-   name3.value = xname;
-}
 
-let name1 = document.getElementById('name1');
-name1.className = 'error + name-first';
-let name2 = document.getElementById('name2');
-name2.className = 'error + name-first';
-let name3 = document.getElementById('name3');
-name3.className = 'error + name-first';
 
-function timeoutError() {
-   function setError(idElement) {
-      let someElement = document.getElementById(idElement);
-      someElement.className = 'error';
+function camelize(str) {
+   var arr = str.split('-');
+
+   for (var i = 1; i < arr.length; i++) {
+      // преобразовать: первый символ с большой буквы
+      arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
    }
-   setError('name1');
+
+   return arr.join('');
 }
-
-function sayHello() {
-   alert('Hello');
-}
-setTimeout(timeoutError, 3000);
-
-function hideElement(dishka) {
-   let value = document.getElementById(dishka);
-   value.className = 'invis';
-}
-
-
-function showElement(dishka) {
-   let value = document.getElementById(dishka);
-   value.className = 'noinvis';
-}
-
-let a = 0;
-function chasi() {
-   let someInput = document.getElementById('name1');
-   someInput.value = a;
-   a++
-}
-setInterval(chasi, 1000);
-
-
-function getSumm(a, b) {
-   let result = +a + +b;
-   console.log(result);
-}
-getSumm('7', '10');
-*/
-
-
-
-let operationButtons = document.getElementsByClassName('operation-button');
-
-let elemOfval1 = document.getElementById("first-input");
-let elemOfval2 = document.getElementById("second-input");
-
-
-function makeOperation(operatinCode) {
-   var number1 = elemOfval1.value;
-   var number2 = elemOfval2.value;
-   if (operatinCode === '+') {
-      var result = +number1 + +number2;
-   } else if (operatinCode === '-') {
-      var result = +number1 - +number2;
-   } else if (operatinCode === '*') {
-      var result = +number1 * +number2;
-   } else {
-      var result = +number1 / +number2;
-   }
-   alert(result);
-}
-function onOperationButtonClick(eventObject) {
-   var clickedEl = eventObject.currentTarget;
-   var operation = clickedEl.innerHTML;
-   makeOperation(operation);
-}
-
-
-for (let i = 0; i < operationButtons.length; i++) {
-   var button = operationButtons[i];
-   button.addEventListener('click', onOperationButtonClick);
-}
-
-
-
+console.log(camelize("list-style-image"));

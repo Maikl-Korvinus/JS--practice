@@ -13,26 +13,28 @@ body {
    background-color: rgb(221, 133, 74);
 }
 
-.wrapper {
-   width: 500px;
-   margin: 0 auto;
-   background-color: rgb(129, 237, 245);
-   text-align: center;
-   padding: 50px 0;
+.like1 {
+   padding: 50px;
 }
-.block1 {
-   margin: 0px 0px 30px 0px;
-   button {
-      margin: 0 20px;
-      width: 40px;
-      height: 40px;
-   }
-}
-.block2 {
+.like2 {
+   padding: 50px;
    display: grid;
-   grid-template: 1fr / 1fr 1fr;
+   grid-template: 1fr / 1fr 1fr 1fr;
+   justify-items: center;
 }
-.choslo1 {
+.first {
+   padding: 20px;
 }
-.choslo2 {
+.second {
+   padding: 20px;
+}
+.third {
+   padding: 20px;
+}
+.like3 {
+   padding: 50px;
+}
+.error-input {
+   padding: 30px;
+   background-color: rgb(240, 156, 61);
 }
