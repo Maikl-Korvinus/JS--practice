@@ -19,15 +19,28 @@ testWebP(function (support) {
 
 
 
+let Elem1 = document.getElementById('first');
+let Elem2 = document.getElementById('second');
+let Elem3 = document.getElementById('third');
+let Elem4 = document.getElementById('fours');
 
-function camelize(str) {
-   var arr = str.split('-');
+let arr1 = [Elem1, Elem2, Elem3, Elem4];
 
-   for (var i = 1; i < arr.length; i++) {
-      // преобразовать: первый символ с большой буквы
-      arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+function chooseAnswer(someElem) {
+   if (someElem.className == 'hey') {
+      return true;
+   } else {
+      return false;
    }
-
-   return arr.join('');
 }
-console.log(camelize("list-style-image"));
+
+function removeElementIfConditionsTrue(arr, predicate) {
+   for (let i = 0; i < arr.length; i++) {
+      let biggy = predicate(arr[i]);
+      if (biggy === true) {
+         arr[i].remove();
+      }
+   }
+}
+
+removeElementIfConditionsTrue(arr1, chooseAnswer);

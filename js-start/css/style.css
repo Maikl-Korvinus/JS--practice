@@ -34,34 +34,12 @@ body {
   background-color: #dd854a;
 }
 
-.like1 {
-  padding: 50px;
+.error {
+  border: red 1px solid;
 }
 
-.like2 {
-  padding: 50px;
-  display: grid;
-  grid-template: 1fr / 1fr 1fr 1fr;
-  justify-items: center;
-}
-
-.first {
-  padding: 20px;
-}
-
-.second {
-  padding: 20px;
-}
-
-.third {
-  padding: 20px;
-}
-
-.like3 {
-  padding: 50px;
-}
-
-.error-input {
-  padding: 30px;
-  background-color: #f09c3d;
+.block {
+  margin: 20px 0;
+  background-color: #fff;
+  height: 100px;
 }
