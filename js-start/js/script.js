@@ -19,28 +19,22 @@ testWebP(function (support) {
 
 
 
-let Elem1 = document.getElementById('first');
-let Elem2 = document.getElementById('second');
-let Elem3 = document.getElementById('third');
-let Elem4 = document.getElementById('fours');
 
-let arr1 = [Elem1, Elem2, Elem3, Elem4];
 
-function chooseAnswer(someElem) {
-   if (someElem.className == 'hey') {
-      return true;
-   } else {
-      return false;
+
+
+let someInput = document.getElementById('pass');
+let someBtn = document.getElementById('button');
+
+function clickBtn() {
+   if (someInput.type == 'password') {
+      someInput.type = 'text';
+   } else if (someInput.type == 'text') {
+      someInput.type = 'password';
    }
 }
 
-function removeElementIfConditionsTrue(arr, predicate) {
-   for (let i = 0; i < arr.length; i++) {
-      let biggy = predicate(arr[i]);
-      if (biggy === true) {
-         arr[i].remove();
-      }
-   }
-}
+someBtn.addEventListener('mousedown', clickBtn);
+someBtn.addEventListener('mouseup', clickBtn);
 
-removeElementIfConditionsTrue(arr1, chooseAnswer);
+
