@@ -20,21 +20,23 @@ testWebP(function (support) {
 
 
 
+let someBlock = document.getElementById('block');
+let someValue = document.getElementById('spanchik');
+let value1 = someValue.innerHTML;
 
-
-
-let someInput = document.getElementById('pass');
-let someBtn = document.getElementById('button');
-
-function clickBtn() {
-   if (someInput.type == 'password') {
-      someInput.type = 'text';
-   } else if (someInput.type == 'text') {
-      someInput.type = 'password';
+function hideSpan() {
+   someBlock.innerHTML = `<input id='first' value='${value1}' type='text'> <button id='button'>Save</button>`;
+   let idButton = document.getElementById('button');
+   let idInput = document.getElementById('first');
+   function qwe() {
+      someBlock.innerHTML = `<span id='lvlup'>${idInput.value}</span>`
+      let repit = document.getElementById('lvlup');
+      repit.addEventListener('click', hideSpan);
    }
-}
+   idButton.addEventListener('click', qwe);
+};
 
-someBtn.addEventListener('mousedown', clickBtn);
-someBtn.addEventListener('mouseup', clickBtn);
 
+
+someValue.addEventListener('click', hideSpan);
 

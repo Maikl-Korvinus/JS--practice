@@ -65,10 +65,10 @@ ul {
 }
 
 .block {
-  padding: 50px;
+  padding: 20px;
+  background-color: #e46464;
 }
 
-.btn {
-  padding: 20px;
-  margin: 0px 0px 0px 10px;
+.color {
+  color: black;
 }
