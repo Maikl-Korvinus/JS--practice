@@ -17,14 +17,20 @@ testWebP(function (support) {
    }
 });
 
-//переменные
-var thumbnails = document.querySelectorAll('.thumbnails img');
-var fullSizeImg = document.getElementById('full-size-img');
-function showFullSizeImage() {
-   fullSizeImg.src = this.dataset.srcFull;
+let burgerButton = document.getElementById('bergerr');
+let menu = document.getElementById('someMenu');
+
+
+
+function simular() {
+   if (menu.className == 'sidebar-menu') {
+      menu.classList.add('active');
+      burgerButton.src = 'https://img2.freepng.ru/20180422/bre/kisspng-computer-icons-cross-delete-button-desktop-wallpap-treasure-map-5adce4c8e8b284.6651471215244259289531.jpg';
+   } else {
+      menu.classList.remove('active');
+      burgerButton.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png';
+   }
 }
 
 
-for (var i = 0; i < thumbnails.length; i++) {
-   thumbnails[i].addEventListener('click', showFullSizeImage);
-}
+burgerButton.addEventListener('click', simular);

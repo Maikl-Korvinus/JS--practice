@@ -64,6 +64,31 @@ ul {
   list-style: none;
 }
 
-.thumbnails img {
-  width: 100px;
+.sidebar-menu {
+  position: absolute;
+  width: 200px;
+  background-color: grey;
+  color: white;
+  top: 30px;
+  left: -180px;
+  -webkit-transition-duration: 1s;
+       -o-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.sidebar-menu.active {
+  left: 0px;
+  -webkit-transition-duration: 1s;
+       -o-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.gamburger-menu {
+  width: 20px;
 }

@@ -43,8 +43,24 @@ h2 {
 ul {
    list-style: none;
 }
-.wrapper {
+
+.sidebar-menu {
+   position: absolute;
+   width: 200px;
+   background-color: grey;
+   color: white;
+   top: 30px;
+   left: -180px;
+   transition-duration: 1s;
+   transform: rotate(-90deg);
 }
-.thumbnails img {
-   width: 100px;
+
+.sidebar-menu.active {
+   left: 0px;
+   transition-duration: 1s;
+   transform: rotate(0deg);
+}
+
+.gamburger-menu {
+   width: 20px;
 }
