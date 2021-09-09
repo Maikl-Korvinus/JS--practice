@@ -64,11 +64,6 @@ ul {
   list-style: none;
 }
 
-.block {
-  padding: 20px;
-  background-color: #e46464;
-}
-
-.color {
-  color: black;
+.thumbnails img {
+  width: 100px;
 }

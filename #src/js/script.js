@@ -17,26 +17,14 @@ testWebP(function (support) {
    }
 });
 
+//переменные
+var thumbnails = document.querySelectorAll('.thumbnails img');
+var fullSizeImg = document.getElementById('full-size-img');
+function showFullSizeImage() {
+   fullSizeImg.src = this.dataset.srcFull;
+}
 
 
-
-let someBlock = document.getElementById('block');
-let someValue = document.getElementById('spanchik');
-let value1 = someValue.innerHTML;
-
-function hideSpan() {
-   someBlock.innerHTML = `<input id='first' value='${value1}' type='text'> <button id='button'>Save</button>`;
-   let idButton = document.getElementById('button');
-   let idInput = document.getElementById('first');
-   function qwe() {
-      someBlock.innerHTML = `<span id='lvlup'>${idInput.value}</span>`
-      let repit = document.getElementById('lvlup');
-      repit.addEventListener('click', hideSpan);
-   }
-   idButton.addEventListener('click', qwe);
-};
-
-
-
-someValue.addEventListener('click', hideSpan);
-
+for (var i = 0; i < thumbnails.length; i++) {
+   thumbnails[i].addEventListener('click', showFullSizeImage);
+}
