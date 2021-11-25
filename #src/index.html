@@ -10,18 +10,16 @@
 </head>
 
 <body>
-   <div class='entire-page'>
-      <div id="someMenu" class='sidebar-menu'>
-         <ul>
-            <li>О нас</li>
-            <li>Инкубатор</li>
-            <li>Счастье</li>
-            <li>Трудоустройство</li>
-         </ul>
+   <nav class="menu">
+      <button class="menu__button">
+         <span>открыть</span>
+         <span>закрыть</span>
+      </button>
+      <div hidden class="menu__list textarea">
+         <textarea maxlength="30" class="textarea__item">qwe</textarea>
+         <div class="textarea__counter">Осталось <span></span> символов</div>
       </div>
-      <img class='gamburger-menu' id="bergerr" src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png' />
-   </div>
-
+   </nav>
    <script src="./js/script.js"></script>
 </body>
 

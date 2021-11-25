@@ -1,4 +1,6 @@
 'use strict'
+
+
 function testWebP(callback) {
 
    var webP = new Image();
@@ -17,20 +19,36 @@ testWebP(function (support) {
    }
 });
 
-let burgerButton = document.getElementById('bergerr');
-let menu = document.getElementById('someMenu');
+const menuBody = document.querySelector('.menu');
 
+document.addEventListener('click', menu);
+{
+   function menu(event) {
+      if (event.target.closest('.menu__button')) {
+         menuBody.classList.toggle('_active');
+      }
+      if (!event.target.closest('.menu')) {
+         menuBody.classList.remove('_active');
+      }
+   }
+   document.addEventListener('keyup', function (event) {
+      if (event.code === 'Escape') {
+         menuBody.classList.remove('_active');
+      }
+   });
 
+   const txtItem = document.querySelector('.textarea__item');
+   const txtItemLimit = txtItem.getAttribute('maxlength');
+   const txtCounter = document.querySelector('.textarea__counter span');
 
-function simular() {
-   if (menu.className == 'sidebar-menu') {
-      menu.classList.add('active');
-      burgerButton.src = 'https://img2.freepng.ru/20180422/bre/kisspng-computer-icons-cross-delete-button-desktop-wallpap-treasure-map-5adce4c8e8b284.6651471215244259289531.jpg';
-   } else {
-      menu.classList.remove('active');
-      burgerButton.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png';
+   txtCounter.innerHTML = txtItemLimit;
+
+   txtItem.addEventListener('keyup', txtSetCounter);
+
+   function txtSetCounter() {
+      const txtCounterResult = txtItemLimit - txtItem.value.length;
+      txtCounter.innerHTML = txtCounterResult;
    }
 }
 
 
-burgerButton.addEventListener('click', simular);
